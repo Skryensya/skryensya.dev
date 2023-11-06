@@ -22,11 +22,11 @@ export default function ToggleTheme() {
         onClick={() => {
           document.documentElement.classList.toggle("dark");
         }}
-        className="border-2 p-2 rounded-md bg-gray-200 dark:bg-gray-800 dark:text-gray-200
-        hover:bg-gray-300 dark:hover:bg-gray-700 hover:text-gray-700 dark:hover:text-gray-300
-        focus:outline-none focus:ring-2 focus:ring-gray-400 dark:focus:ring-gray-600
-        transition duration-200 ease-in-out
-        fixed bottom-10 right-10 z-50"
+        className="fixed bottom-10 right-10 z-50 rounded-md border-2
+        bg-gray-200 p-2 transition duration-200
+        ease-in-out hover:bg-gray-300 hover:text-gray-700 focus:outline-none
+        focus:ring-2 focus:ring-gray-400 dark:bg-gray-800
+        dark:text-gray-200 dark:hover:bg-gray-700 dark:hover:text-gray-300 dark:focus:ring-gray-600"
       >
         Toggle theme
       </button>
