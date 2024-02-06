@@ -32,8 +32,10 @@ export default function Navbar() {
       <nav className="w-full border-b-2 py-1 ">
         <div className="pl-12">
           <div className="flex items-center justify-between ">
-            <p>{"Allison Peña's site"}</p>
-            <div className="flex flex-col">
+            <a className="" href="/">
+              A\\ISON PEÑA
+            </a>
+            {/* <div className="flex flex-col">
               <button
                 onClick={() => {
                   setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -49,10 +51,10 @@ export default function Navbar() {
                   <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z" />
                 </svg>
               </button>
-            </div>
+            </div> */}
           </div>
-          <div
-            className={cn(" overflow-hidden transition-all duration-500")}
+          {/* <div
+            className={cn(" overflow-hidden ")}
             style={{
               height: isMobileMenuOpen ? "100dvh" : "0",
             }}
@@ -62,7 +64,7 @@ export default function Navbar() {
                 {LINKS.map((link, index) => (
                   <li key={index} className="mr-6 inline-block">
                     <a
-                      className=" transition-all duration-500 hover:underline md:text-base"
+                      className="  md:text-base"
                       href={link.url}
                       title={
                         "Go to " +
@@ -76,7 +78,7 @@ export default function Navbar() {
                 ))}
               </ul>
             ) : null}
-          </div>
+          </div> */}
         </div>
       </nav>
     </div>

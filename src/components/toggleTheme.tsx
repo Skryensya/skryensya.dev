@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { cn } from "@/lib/utilities";
 
 export default function ToggleTheme() {
   // when press shift + T on mac, toggle dark mode
@@ -22,13 +23,13 @@ export default function ToggleTheme() {
         onClick={() => {
           document.documentElement.classList.toggle("dark");
         }}
-        className="fixed bottom-10 right-10 z-50 rounded-md border-2
-        bg-gray-200 p-2 transition duration-200
-        ease-in-out hover:bg-gray-300 hover:text-gray-700 focus:outline-none
-        focus:ring-2 focus:ring-gray-400 dark:bg-gray-800
-        dark:text-gray-200 dark:hover:bg-gray-700 dark:hover:text-gray-300 dark:focus:ring-gray-600"
+        className={cn(
+          "border-2 border-black px-2 focus:outline-none",
+          " dark:border-gray-200 dark:bg-gray-800  dark:text-gray-200",
+        )}
       >
-        Toggle theme
+        <span className="dark:hidden">Dark</span>
+        <span className="hidden dark:block">Light</span>
       </button>
     </>
   );
